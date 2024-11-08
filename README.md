@@ -1,5 +1,5 @@
 # Momo Store 🛒
-MomoMart adalah aplikasi e-commerce modern yang memungkinkan pengguna untuk menjelajahi berbagai produk, menambahkannya ke keranjang, melakukan pemesanan, dan meninjau produk. Aplikasi ini dibangun dengan menggunakan Next.js untuk menghadirkan pengalaman pengguna yang cepat, responsif, dan ramah SEO.
+Momo Store adalah aplikasi e-commerce modern yang memungkinkan pengguna untuk menjelajahi berbagai produk, menambahkannya ke keranjang, melakukan pemesanan, dan meninjau produk. Aplikasi ini dibangun dengan menggunakan Next.js untuk menghadirkan pengalaman pengguna yang cepat, responsif, dan ramah SEO.
 
 ## 📌 Fitur Utama
 - **Daftar Produk**: Pengguna dapat menelusuri dan mencari produk dari berbagai kategori.
