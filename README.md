@@ -12,7 +12,7 @@ Momo Store adalah aplikasi e-commerce modern yang memungkinkan pengguna untuk me
 ## 🔧 Teknologi yang Digunakan
 - **Frontend**: [Vue.js](https://vuejs.org/), [Tailwind CSS](https://tailwindcss.com/)
 - **Backend API**: Express.js API Routes, Node.js
-- **Database**: MongoDB
+- **DBMS**: MongoDB
 - **Autentikasi**: JSON Web Token (JWT)
 - **Deployment**: Vercel, Docker
 
