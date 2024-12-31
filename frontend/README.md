@@ -1,27 +1,5 @@
-# simple vue 3 ecommerce
+# Vue 3 + Vite
 
-demo: [vue ecommerce](https://vue-ecommerce-template.netlify.app/)
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-simple repository for starters to setup a good folder structure(sort by feature), build a cart with vuex, how use plugins, create components for vanilla js libraries, and countdown timer - dropdown - sliders - gallery - rating.
-
-## Project setup
-
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-
-```
-yarn build
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).

@@ -1,41 +1,30 @@
-<template>
-  <div id="app">
-    <BaseHeader @show-sidebar="handleSidebar" />
-    <router-view />
-    <BaseFooter :showSideBar="isShowSideBar" />
-  </div>
-</template>
-
-<script>
-import BaseHeader from './components/BaseHeader'
-import BaseFooter from './components/BaseFooter'
-// import user from '@/modules/user/store'
-// import products from '@/modules/product/store'
-export default {
-  data: () => ({
-    isShowSideBar: false
-  }),
-
-  components: {
-    BaseHeader,
-    BaseFooter
-  },
-
-  methods: {
-    handleSidebar(showSideBar) {
-      this.isShowSideBar = showSideBar
-    }
-  },
-
-  created() {
-    // if (! this.$store.hasModule('userName')) {
-    // this.$store.registerModule('userName', user)
-    // }
-    // if (! this.$store.hasModule('products')) {
-    // this.$store.registerModule('products', products)
-    // }
-  }
-}
+<script setup>
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
-<style></style>
+<template>
+  <div>
+    <a href="https://vite.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
+  </div>
+  <HelloWorld msg="Vite + Vue" />
+</template>
+
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
+}
+</style>
