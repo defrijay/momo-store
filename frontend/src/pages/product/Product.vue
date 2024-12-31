@@ -1,16 +1,25 @@
+<script>
+import Navbar from "../../components/Navbar.vue";
+import Footer from "../../components/Footer.vue";
+
+
+export default {
+  name: "Product",
+  components: {
+    Navbar,
+    Footer
+  },
+};
+</script>
+
 <template>
+  <Navbar />
 <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-12">
   <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
     <!-- Heading & Filters -->
     <div class="mb-4 flex items-center justify-between gap-4 md:mb-8">
         <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Katalog Produk</h2>
-
-        <router-link to="/product" title="" class="flex items-center text-base font-medium text-primary-700 hover:underline dark:text-primary-500">
-            Lihat Semua
-            <svg class="ms-1 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
-            </svg>
-        </router-link>
+      
     </div>
     <div class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
       <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -784,9 +793,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full text-center">
-      <router-link to="/product" type="button" class="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Show more</router-link>
-    </div>
+    
   </div>
   <!-- Filter modal -->
   <form action="#" method="get" id="filterModal" tabindex="-1" aria-hidden="true" class="fixed left-0 right-0 top-0 z-50 hidden h-modal w-full overflow-y-auto overflow-x-hidden p-4 md:inset-0 md:h-full">
@@ -1400,4 +1407,5 @@
     </div>
   </form>
 </section>
+<Footer />
 </template>

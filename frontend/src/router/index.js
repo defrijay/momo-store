@@ -5,6 +5,10 @@ import Register from '../pages/auth/Register.vue';
 import Cart from '../pages/cart/Cart.vue';
 import Order from '../pages/cart/Order.vue';
 import Payment from '../pages/cart/Payment.vue';
+import Product from '../pages/product/Product.vue';
+import Category from '../pages/category/Category.vue';
+import Contact from '../pages/contact/Contact.vue';
+import About from '../pages/about/About.vue';
 
 const routes = [
     {
@@ -36,6 +40,26 @@ const routes = [
         path: '/payment',
         name: 'Payment',
         component: Payment,
+    },
+    {
+        path: '/product',
+        name: 'Product',
+        component: Product,
+    },
+    {
+        path: '/category',
+        name: 'Category',
+        component: Category,
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact,
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: About,
     },
 ];
 

@@ -11,16 +11,16 @@
               <router-link to="/" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</router-link>
             </li>
             <li>
-              <a href="#" class="text-gray-900 dark:text-white hover:underline">Tentang</a>
+              <router-link to="/about" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Tentang</router-link>
             </li>
             <li>
               <a href="#" class="text-gray-900 dark:text-white hover:underline">Artikel</a>
             </li>
             <li>
-              <a href="#" class="text-gray-900 dark:text-white hover:underline">Produk</a>
+              <router-link to="/product" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Produk</router-link>
             </li>
             <li>
-              <a href="#" class="text-gray-900 dark:text-white hover:underline">Kontak</a>
+              <router-link to="/contact" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Kontak</router-link>
             </li>
           </ul>
         </div>
