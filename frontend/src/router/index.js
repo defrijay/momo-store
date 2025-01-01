@@ -6,9 +6,11 @@ import Cart from '../pages/cart/Cart.vue';
 import Order from '../pages/cart/Order.vue';
 import Payment from '../pages/cart/Payment.vue';
 import Product from '../pages/product/Product.vue';
+import DetailProduct from '../pages/product/DetailProduct.vue';
 import Category from '../pages/category/Category.vue';
 import Contact from '../pages/contact/Contact.vue';
 import About from '../pages/about/About.vue';
+import DetailArticle from '../pages/article/DetailArticle.vue'
 
 const routes = [
     {
@@ -47,6 +49,11 @@ const routes = [
         component: Product,
     },
     {
+        path: '/detail-product',
+        name: 'DetailProduct',
+        component: DetailProduct,
+    },
+    {
         path: '/category',
         name: 'Category',
         component: Category,
@@ -60,6 +67,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: About,
+    },
+    {
+        path: '/detail-article',
+        name: 'DetailArticle',
+        component: DetailArticle,
     },
 ];
 

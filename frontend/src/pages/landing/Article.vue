@@ -1,64 +1,145 @@
 <template>
-    <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div class="mb-4 flex items-center justify-between gap-4 md:mb-8">
-                <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Artikel Pilihan</h2>
-
-                <a href="#" title="" class="flex items-center text-base font-medium text-primary-700 hover:underline dark:text-primary-500">
-                    Lihat Semua
-                    <svg class="ms-1 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
-                    </svg>
-                </a>
+    <div class="bg-gray-100 min-h-screen">
+      <div class="container mx-auto py-8">
+        <h2 class="text-xl font-bold mb-4">Artikel Pilihan</h2>
+        <div class="relative bg-gray-300 rounded-lg overflow-hidden py-8 px-10">
+          <div
+            class="absolute top-4 left-4 bg-white text-gray-800 text-xs font-bold px-3 py-1 rounded-full shadow-md mx-10"
+          >
+            Category
+          </div>
+  
+          <div class="flex flex-col justify-between h-full w-full md:w-1/2 pt-20 px-10">
+            <div>
+              <div class="flex items-center text-sm text-gray-700 space-x-2">
+                <i class="bi bi-person-circle"></i>
+                <span>by Admin</span>
+                <i class="bi bi-calendar"></i>
+                <span>29 Maret 2024</span>
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mt-4">Produk Tumbler Tahan Api</h2>
+              <p class="text-sm text-gray-600 mt-2">Berikut 5 tumbler favorit anak muda yang tahan api...</p>
             </div>
-            <div class="grid gap-8 lg:grid-cols-2">
-                <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <div class="flex justify-between items-center mb-5 text-gray-500">
-                        <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-                            <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
-                            Tutorial
-                        </span>
-                        <span class="text-sm">14 days ago</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="#">How to quickly deploy a static website</a></h2>
-                    <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers influence both web designers and developers.</p>
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center space-x-4">
-                            <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar" />
-                            <span class="font-medium dark:text-white">
-                                Jese Leos
-                            </span>
-                        </div>
-                        <a href="#" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
-                            Read more
-                            <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
-                </article> 
-                <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <div class="flex justify-between items-center mb-5 text-gray-500">
-                        <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-                            <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
-                            Article
-                        </span>
-                        <span class="text-sm">14 days ago</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="#">Our first project with React</a></h2>
-                    <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers influence both web designers and developers.</p>
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center space-x-4">
-                            <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Green avatar" />
-                            <span class="font-medium dark:text-white">
-                                Bonnie Green
-                            </span>
-                        </div>
-                        <a href="#" class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
-                            Read more
-                            <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
-                </article>                  
-            </div>  
+            <button class="text-blue-500 mt-4 font-medium flex items-center">
+              Read More <i class="bi bi-arrow-right ml-2"></i>
+            </button>
+          </div>
+  
+          <!-- navigasi button -->
+          <div class="absolute inset-y-0 left-4 flex items-center">
+            <button class="bg-white p-3 rounded-full shadow-md hover:bg-gray-100">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+          </div>
+          <div class="absolute inset-y-0 right-4 flex items-center">
+            <button class="bg-white p-3 rounded-full shadow-md hover:bg-gray-100">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
         </div>
-    </section>
-</template>
+      </div>
+  
+      <div class="container mx-auto py-8">
+        <h2 class="text-xl font-bold mb-4">Category</h2>
+        <div class="flex justify-between space-x-4">
+          <div class="relative bg-gray-300 rounded-lg h-20 w-20 overflow-hidden">
+            <img src="https://via.placeholder.com/80" alt="Category" class="object-cover w-full h-full" />
+          </div>
+          <div class="relative bg-gray-300 rounded-lg h-20 w-20 overflow-hidden">
+            <img src="https://via.placeholder.com/80" alt="Category" class="object-cover w-full h-full" />
+          </div>
+          <div class="relative bg-gray-300 rounded-lg h-20 w-20 overflow-hidden">
+            <img src="https://via.placeholder.com/80" alt="Category" class="object-cover w-full h-full" />
+          </div>
+          <div class="relative bg-gray-300 rounded-lg h-20 w-20 overflow-hidden">
+            <img src="https://via.placeholder.com/80" alt="Category" class="object-cover w-full h-full" />
+          </div>
+          <div class="relative bg-gray-300 rounded-lg h-20 w-20 overflow-hidden">
+            <img src="https://via.placeholder.com/80" alt="Category" class="object-cover w-full h-full" />
+          </div>
+          <div class="relative bg-gray-300 rounded-lg h-20 w-20 overflow-hidden">
+            <img src="https://via.placeholder.com/80" alt="Category" class="object-cover w-full h-full" />
+          </div>
+        </div>
+      </div>
+  
+      <div class="container mx-auto py-8">
+        <div class="flex space-x-4">
+          <input
+            type="text"
+            placeholder="Cari artikel MomoMart"
+            class="flex-1 bg-gray-200 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <select class="bg-gray-200 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>Jenis Berita</option>
+            <option>Terbaru</option>
+            <option>Populer</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="container mx-auto py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="bg-gray-300 rounded-lg p-4 flex flex-col justify-between" v-for="i in 12" :key="i">
+            <div class="relative h-40 w-full rounded-lg overflow-hidden mb-4">
+              <img src="https://via.placeholder.com/300x200" alt="Artikel" class="object-cover w-full h-full" />
+              <span class="absolute top-2 left-2 text-xs font-bold uppercase bg-gray-700 text-white px-2 py-1 rounded-lg">
+                Category
+              </span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold">Produk Tumbler Tahan Api</h3>
+              <p class="text-sm text-gray-600 mt-2">Berikut 5 tumbler favorit anak muda yang tahan api...</p>
+            </div>
+            <router-link to="/detail/artikel">
+              <button class="text-blue-500 mt-4 font-medium flex items-center">
+                Read More <i class="bi bi-arrow-right ml-2"></i>
+              </button>
+            </router-link>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container mx-auto py-8 flex justify-center">
+        <nav aria-label="Page navigation example">
+          <ul class="inline-flex -space-x-px">
+            <li>
+              <a
+                href="#"
+                class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700"
+                >Previous</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                >1</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                >2</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                >3</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700"
+                >Next</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </template>

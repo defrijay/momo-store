@@ -14,7 +14,7 @@
               <router-link to="/about" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Tentang</router-link>
             </li>
             <li>
-              <a href="#" class="text-gray-900 dark:text-white hover:underline">Artikel</a>
+              <router-link to="/detail-article" class="text-gray-900 dark:text-white hover:underline">Artikel</router-link>
             </li>
             <li>
               <router-link to="/product" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Produk</router-link>
