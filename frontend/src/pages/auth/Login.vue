@@ -116,7 +116,7 @@ export default {
             </div>
 
             <div class="col-span-12">
-              <button type="submit" class="mt-4 w-full rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 dark:bg-teal-700 dark:hover:bg-teal-800":disabled="loading"> {{ loading ? "Memasukkan..." : "Masuk" }}
+              <button type="submit" class="mt-4 w-full rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 dark:bg-teal-700 dark:hover:bg-teal-800" :disabled="loading"> {{ loading ? "Memasukkan..." : "Masuk" }}
               </button>
             </div>
           </form>

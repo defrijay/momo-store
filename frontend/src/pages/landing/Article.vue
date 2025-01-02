@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+  <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-0">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
       <div class="container mx-auto py-8">
         <h2 class="text-xl font-bold mb-4">Artikel Pilihan</h2>
@@ -40,7 +40,7 @@
         </div>
       </div>
   
-      <div class="container mx-auto py-8">
+      <!-- <div class="container mx-auto py-8">
         <h2 class="text-xl font-bold mb-4">Category</h2>
         <div class="flex justify-between space-x-4">
           <div class="relative bg-gray-300 rounded-lg h-20 w-20 overflow-hidden">
@@ -62,9 +62,9 @@
             <img src="https://via.placeholder.com/80" alt="Category" class="object-cover w-full h-full" />
           </div>
         </div>
-      </div>
+      </div> -->
   
-      <div class="container mx-auto py-8">
+      <!-- <div class="container mx-auto py-8">
         <div class="flex space-x-4">
           <input
             type="text"
@@ -77,11 +77,11 @@
             <option>Populer</option>
           </select>
         </div>
-      </div>
+      </div> -->
   
       <div class="container mx-auto py-8">
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <div class="bg-gray-300 rounded-lg p-4 flex flex-col justify-between" v-for="i in 12" :key="i">
+          <div class="bg-gray-300 rounded-lg p-4 flex flex-col justify-between" v-for="i in 8" :key="i">
             <div class="relative h-40 w-full rounded-lg overflow-hidden mb-4">
               <img src="https://via.placeholder.com/300x200" alt="Artikel" class="object-cover w-full h-full" />
               <span class="absolute top-2 left-2 text-xs font-bold uppercase bg-gray-700 text-white px-2 py-1 rounded-lg">

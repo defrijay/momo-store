@@ -15,66 +15,23 @@
           <nav aria-label="Global" class="hidden md:block">
             <ul class="flex items-center gap-6 text-sm">
               <li>
-                <router-link to="/"
-                  class="transition text-white hover:text-white/75"
-                  href="#"
-                >
-                  Home
-                </router-link>
+                <router-link to="/" class="transition text-white hover:text-white/75"> Home </router-link>
               </li>
               <li>
-                <router-link to="/about"
-                  class="transition text-white hover:text-white/75"
-                  href="#"
-                >
-                  Tentang
-                </router-link>
+                <router-link to="/about" class="transition text-white hover:text-white/75"> Tentang </router-link>
               </li>
     
               <li>
-                <router-link to="/detail-article"
-                  class="transition text-white hover:text-white/75"
-                  href="#"
-                >
-                  Artikel
-                </router-link>
+                <router-link to="/detail-article" class="transition text-white hover:text-white/75"> Artikel </router-link>
               </li>
     
               <li>
-                <router-link to="/product"
-                  class="transition text-white hover:text-white/75"
-                  href="#"
-                >
-                  Produk
-                </router-link>
+                <router-link to="/product" class="transition text-white hover:text-white/75"> Produk </router-link>
               </li>
     
               <li>
-                <router-link to="/contact"
-                  class="transition text-white hover:text-white/75"
-                  href="#"
-                >
-                  Kontak
-                </router-link>
+                <router-link to="/contact" class="transition text-white hover:text-white/75"> Kontak </router-link>
               </li>
-    
-              <!-- <li>
-                <a
-                  class="transition text-white hover:text-white/75"
-                  href="#"
-                >
-                  Projects
-                </a>
-              </li>
-    
-              <li>
-                <a
-                  class="transition text-white hover:text-white/75"
-                  href="#"
-                >
-                  Blog
-                </a>
-              </li> -->
             </ul>
           </nav>
     

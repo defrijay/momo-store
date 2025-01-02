@@ -3,7 +3,7 @@
     <component :is="navbarComponent" />
     <Hero />
     <Carousel />
-    <Category />
+    <!-- <Category /> -->
     <Products />
     <Article />
     <Team />
@@ -30,7 +30,7 @@ export default {
     NavbarA,
     Hero,
     Carousel,
-    Category,
+    // Category,
     Products,
     Article,
     Team,
