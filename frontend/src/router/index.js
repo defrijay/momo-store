@@ -6,6 +6,8 @@ import Article from '../pages/article/article.vue';
 import Detail_product from '../pages/detail_product/Detail_Product.vue';
 import Cart from '../pages/cart/cart.vue';
 import Checkout from '../pages/checkout/checkout.vue';
+import DetailProduk from '../pages/detail_product/DetailProduk.vue';
+import Artikel from '../pages/article/Artikel.vue';
 
 
 const routes = [
@@ -30,9 +32,14 @@ const routes = [
     component: Article,
   },
   {
+    path: '/article',
+    name: 'Article',
+    component: Artikel,
+  },
+  {
     path: '/detail-product',
     name: 'DetailProduct',
-    component: Detail_product,
+    component: DetailProduk,
   },
   {
     path: '/cart',
