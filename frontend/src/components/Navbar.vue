@@ -15,6 +15,14 @@
           <nav aria-label="Global" class="hidden md:block">
             <ul class="flex items-center gap-6 text-sm">
               <li>
+                <router-link to="/"
+                  class="transition text-white hover:text-white/75"
+                  href="#"
+                >
+                  Home
+                </router-link>
+              </li>
+              <li>
                 <router-link to="/about"
                   class="transition text-white hover:text-white/75"
                   href="#"
