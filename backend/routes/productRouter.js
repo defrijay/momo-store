@@ -23,12 +23,12 @@ const router = express.Router();
 router
     .route("/")
     .get(fetchProducts) // Get product
-    .post(authenticate, authorizeAdmin, formidable(), addProduct);  // Create the product
+    .post(authorizeAdmin, addProduct);  // Create the product
 
 // Define routes with endpoint '/all-products' for fetching all list products
 router.route("/all-products").get(fetchAllProducts);
 
-// Define routes with endpoint '/:id/reviews' for fetching all list review product
+// Define routes with endpoint '/:id/reviews' for add review product
 router.route("/:id/reviews").post(authenticate, checkId, addProductReview);
 
 // Define routes with endpoint '/top' for fetching all list top product
