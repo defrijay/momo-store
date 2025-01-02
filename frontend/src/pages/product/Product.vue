@@ -1,5 +1,7 @@
 <script>
 import axios from "axios";
+import Navbar from "../../components/Navbar.vue";
+import Footer from "../../components/Footer.vue";
 
 export default {
   name: "Products",
@@ -15,6 +17,10 @@ export default {
     } catch (error) {
       console.error("Error fetching products:", error);
     }
+  },
+  components: {
+    Navbar,
+    Footer
   },
 };
 </script>
