@@ -35,7 +35,7 @@ export default {
           id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
           data-dropdown-placement="bottom">
           <span class="sr-only">Open user menu</span>
-          <img class="w-8 h-8 rounded-full" src=".." alt="user photo">
+          <img class="w-8 h-8 rounded-full" src="" alt="user photo">
         </button>
         <!-- Dropdown menu -->
         <div
