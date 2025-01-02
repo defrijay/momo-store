@@ -1,5 +1,6 @@
 <template>
-    <div class="bg-gray-100 min-h-screen">
+  <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+    <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
       <div class="container mx-auto py-8">
         <h2 class="text-xl font-bold mb-4">Artikel Pilihan</h2>
         <div class="relative bg-gray-300 rounded-lg overflow-hidden py-8 px-10">
@@ -142,4 +143,5 @@
         </nav>
       </div>
     </div>
+  </section>
   </template>
