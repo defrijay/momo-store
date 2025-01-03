@@ -18,12 +18,35 @@ export default {
     };
   },
   methods: {
+    async fetchArticleDetails(articleId) {
+      try {
+        this.isLoading = true;
+        const response = await axios.get(`http://localhost:5000/api/articles/${articleId}`);
+        const fetchedArticle = response.data;
+
+        // Pastikan isiArtikel berupa array paragraf
+        if (typeof fetchedArticle.isiArtikel === "string") {
+          fetchedArticle.isiArtikel = fetchedArticle.isiArtikel.split("\n").map((para) => para.trim());
+        }
+
+        this.article = fetchedArticle;
+        this.error = null;
+        this.isLoading = false;
+
+        // Muat rekomendasi artikel
+        this.fetchRecommendedArticles(articleId);
+      } catch (error) {
+        console.error("Error fetching article details:", error);
+        this.error = "Gagal memuat detail artikel.";
+        this.isLoading = false;
+      }
+    },
     async fetchRecommendedArticles(currentArticleId) {
       try {
         const response = await axios.get("http://localhost:5000/api/articles");
         // Filter artikel yang berbeda dengan artikel saat ini
         this.recommendedArticles = response.data.filter(
-          (item) => item.id !== currentArticleId
+          (item) => item._id !== currentArticleId
         );
       } catch (error) {
         console.error("Error fetching recommended articles:", error);
@@ -33,28 +56,17 @@ export default {
   },
   async mounted() {
     const articleId = this.$route.params.id; // Ambil ID dari URL
-    try {
-      const response = await axios.get(`http://localhost:5000/api/articles/${articleId}`);
-      const fetchedArticle = response.data;
-
-      // Pastikan isiArtikel berupa array paragraf
-      if (typeof fetchedArticle.isiArtikel === "string") {
-        fetchedArticle.isiArtikel = fetchedArticle.isiArtikel.split("\n").map((para) => para.trim());
-      }
-
-      this.article = fetchedArticle;
-      this.isLoading = false;
-
-      // Muat rekomendasi artikel
-      this.fetchRecommendedArticles(articleId);
-    } catch (error) {
-      console.error("Error fetching article details:", error);
-      this.error = "Gagal memuat detail artikel.";
-      this.isLoading = false;
-    }
+    this.fetchArticleDetails(articleId);
+  },
+  watch: {
+    // Deteksi perubahan ID di route
+    "$route.params.id"(newId) {
+      this.fetchArticleDetails(newId);
+    },
   },
 };
 </script>
+
 
 
 <template>
@@ -120,23 +132,6 @@ export default {
 
       </div>
 
-      <!-- <aside class="bg-white rounded-lg shadow p-6">
-        <h2 class="text-lg font-bold mb-4">Rekomendasi Artikel</h2>
-        <ul class="space-y-4">
-          <li v-for="(recommended, index) in article.rekomendasi" :key="index" class="flex items-center space-x-4">
-            <img
-              :src="recommended.image || 'https://via.placeholder.com/80'"
-              alt="Artikel"
-              class="rounded-lg h-16 w-16 object-cover"
-            />
-            <div>
-              <p class="font-bold text-sm text-gray-800">{{ recommended.judul }}</p>
-              <p class="text-xs text-gray-500">{{ recommended.deskripsi }}</p>
-            </div>
-          </li>
-        </ul>
-      </aside> -->
-
       <!-- Rekomendasi Artikel -->
       <aside v-if="recommendedArticles.length" class="bg-white rounded-lg shadow p-6">
         <h2 class="text-lg font-bold mb-4">Artikel Lainnya</h2>
@@ -152,7 +147,12 @@ export default {
               class="rounded-lg h-16 w-16 object-cover"
             />
             <div>
-              <p class="font-bold text-sm text-gray-800">{{ recommended.judul }}</p>
+              <router-link
+                :to="`/detail-article/${recommended._id}`"
+                class="font-bold text-sm text-gray-800 hover:underline"
+              >
+                {{ recommended.judul }}
+              </router-link>
               <p class="text-xs text-gray-500">{{ recommended.paragraph }}</p>
             </div>
           </li>
