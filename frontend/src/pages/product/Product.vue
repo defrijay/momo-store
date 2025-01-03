@@ -30,7 +30,7 @@ export default {
     try {
       const response = await axios.get("http://localhost:5000/api/products/all-products");
       this.products = response.data;
-      this.filteredProducts = response.data; // Copy initial products to filteredProducts
+      this.filteredProducts = response.data; 
     } catch (error) {
       console.error("Error fetching products:", error);
     }
