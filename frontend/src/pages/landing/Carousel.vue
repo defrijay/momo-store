@@ -4,23 +4,23 @@
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/Images/LandingPage/Carousel-1.jpg" class="absolute block w-full h-full object-contain" alt="...">
+                <img src="/Images/LandingPage/Carousel-1.jpg" class="absolute block object-cover w-full h-full" alt="...">
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/Images/LandingPage/Carousel-1.jpg" class="absolute block w-full h-full object-contain" alt="...">
+                <img src="/Images/LandingPage/Hero-1.jpg" class="absolute block object-cover w-full h-full" alt="...">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/Images/LandingPage/Carousel-1.jpg" class="absolute block w-full h-full object-contain" alt="...">
+                <img src="/Images/LandingPage/Hero-2.jpg" class="absolute block object-cover w-full h-full" alt="...">
             </div>
             <!-- Item 4 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/Images/LandingPage/Carousel-1.jpg" class="absolute block w-full h-full object-contain" alt="...">
+                <img src="/Images/LandingPage/Hero-3.jpg" class="absolute block object-cover w-full h-full" alt="...">
             </div>
             <!-- Item 5 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/Images/LandingPage/Carousel-1.jpg" class="absolute block w-full h-full object-contain" alt="...">
+                <img src="/Images/LandingPage/Hero-4.jpg" class="absolute block object-cover w-full h-full" alt="...">
             </div>
         </div>
         <!-- Slider indicators -->
