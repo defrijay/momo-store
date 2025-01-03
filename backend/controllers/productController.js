@@ -125,7 +125,7 @@ const fetchAllProducts = asyncHandler(async (req, res) => {
   try {
     const products = await Product.find({}) // pastikan tidak ada query yang salah
       .populate("category") // populate untuk relasi kategori
-      .limit(12)
+      .limit(100)
       .sort({ createdAt: -1 });  // perbaiki jika sorting tidak sesuai
     
     res.json(products);

@@ -15,7 +15,7 @@ export default {
   async mounted() {
     try {
       const response = await axios.get("http://localhost:5000/api/products/all-products");
-      this.products = response.data;
+      this.products = response.data.slice(0, 12);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -134,7 +134,7 @@ export default {
 
             <div class="mt-4 flex items-center justify-between gap-4">
               <p class="text-lg font-extrabold leading-tight text-gray-900 dark:text-white">
-                Rp.{{ formatRupiah(product.price) }}
+                {{ formatRupiah(product.price) }}
               </p>
               <button type="button"
                 class="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
