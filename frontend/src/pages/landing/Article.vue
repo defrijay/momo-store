@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     limitedArticles() {
-      return this.articles.slice(0, 6);
+      return this.articles.slice(0, 4);
     },
   },
   methods: {
@@ -78,9 +78,10 @@ export default {
                     <h2 class="text-2xl font-bold text-white mt-4">{{ article.judul }}</h2>
                     <p class="text-sm text-white mt-2">{{ limitedIsiArtikel(article.isiArtikel) }}</p>
                   </div>
-                  <button class="text-blue-500 mt-4 font-bold flex items-center">
-                    Read More <i class="bi bi-arrow-right ml-2"></i>
-                  </button>
+                  
+                  <router-link :to="`/detail-article/${article._id}`" class="text-blue-500 mt-4 font-bold flex items-center hover:underline dark:text-white">
+                    Read More
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -104,10 +105,8 @@ export default {
               <h3 class="text-lg font-bold">{{ article.judul }}</h3>
               <p class="text-sm text-gray-600 mt-2">{{ limitedIsiArtikel(article.isiArtikel) }}</p>
             </div>
-            <router-link to="/detail/artikel">
-              <button class="text-blue-500 mt-4 font-medium flex items-center">
-                Read More <i class="bi bi-arrow-right ml-2"></i>
-              </button>
+            <router-link :to="`/detail-article/${article._id}`" class="text-blue-500 mt-4 font-bold flex items-center hover:underline dark:text-white">
+              Read More
             </router-link>
           </div>
         </div>
