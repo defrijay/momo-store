@@ -54,8 +54,14 @@ export default {
           <!-- Artikel Container -->
           <div class="flex overflow-hidden">
             <div v-for="(article, index) in limitedArticles" :key="article._id" class="w-full flex-shrink-0">
-              <div class="relative bg-gray-300 rounded-lg overflow-hidden py-8 px-10">
-                <div class="absolute top-4 left-4 text-gray-800 text-xs font-bold px-3 py-1 rounded-full">
+              <div class="relative bg-gray-300 rounded-lg overflow-hidden py-8 px-10"
+                :style="{
+                  backgroundImage: `url('/Images/Articles/${article.image}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }">
+                
+                <div class="absolute top-4 left-4 text-xs font-bold px-3 py-1 rounded-full">
                   <span v-for="(tag, index) in article.hastag" :key="index"
                     class="absolute top-2 left-2 text-xs font-bold uppercase bg-gray-700 text-white px-2 py-1 rounded-lg">
                     {{ tag }}
@@ -63,16 +69,16 @@ export default {
                 </div>
                 <div class="flex flex-col justify-between h-full w-full md:w-1/2 pt-20 px-10">
                   <div>
-                    <div class="flex items-center text-sm text-gray-700 space-x-2">
+                    <div class="flex items-center text-sm text-white space-x-2">
                       <i class="bi bi-person-circle"></i>
                       <span>by {{ article.penulis }}</span>
                       <i class="bi bi-calendar"></i>
                       <span>{{ formatTanggal(article.tanggalRilis) }}</span>
                     </div>
-                    <h2 class="text-2xl font-bold text-gray-900 mt-4">{{ article.judul }}</h2>
-                    <p class="text-sm text-gray-600 mt-2">{{ limitedIsiArtikel(article.isiArtikel) }}</p>
+                    <h2 class="text-2xl font-bold text-white mt-4">{{ article.judul }}</h2>
+                    <p class="text-sm text-white mt-2">{{ limitedIsiArtikel(article.isiArtikel) }}</p>
                   </div>
-                  <button class="text-blue-500 mt-4 font-medium flex items-center">
+                  <button class="text-blue-500 mt-4 font-bold flex items-center">
                     Read More <i class="bi bi-arrow-right ml-2"></i>
                   </button>
                 </div>
@@ -86,12 +92,9 @@ export default {
       <div class="container mx-auto py-8">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <div v-for="article in limitedArticles" :key="article._id"
-            class="bg-gray-300 rounded-lg p-4 flex flex-col justify-between">
+            class="bg-white shadow-lg border-2 rounded-lg p-4 flex flex-col justify-between">
             <div class="relative h-40 w-full rounded-lg overflow-hidden mb-4">
-              <router-link :to="`/articles/${article._id}`">
-                <img :src="`/Images/${article.image}`" :alt="article.judul" class="mx-auto h-full" />
-                class="mx-auto h-full" />
-              </router-link>
+              <img :src="`/Images/Articles/${article.image}`" :alt="article.judul" class="mx-auto h-full" />
               <span v-if="article.hastag.length > 0"
                 class="absolute top-2 left-2 text-xs font-bold uppercase bg-gray-700 text-white px-2 py-1 rounded-lg">
                 {{ article.hastag[0] }}
@@ -118,3 +121,4 @@ export default {
     </div>
   </section>
 </template>
+
