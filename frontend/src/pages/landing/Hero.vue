@@ -33,7 +33,7 @@
           </a> -->
         </div>
         <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="/Images/LandingPage/Hero-2.jpg" alt="mockup" />
+            <img src="/Images/LandingPage/Hero-2.jpg" alt="mockup" class="object-cover w-full h-full rounded-lg"/>
         </div>
       </div>
     </section>
