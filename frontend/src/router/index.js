@@ -11,6 +11,7 @@ import Category from '../pages/category/Category.vue';
 import Contact from '../pages/contact/Contact.vue';
 import About from '../pages/about/About.vue';
 import DetailArticle from '../pages/article/DetailArticle.vue'
+import ListArticle from '../pages/article/ListArticle.vue'
 
 const routes = [
     {
@@ -74,9 +75,14 @@ const routes = [
         component: About,
     },
     {
-        path: '/detail-article',
+        path: '/detail-article/:id',
         name: 'DetailArticle',
         component: DetailArticle,
+    },
+    {
+        path: '/list-article',
+        name: 'ListArticle',
+        component: ListArticle,
     },
 ];
 

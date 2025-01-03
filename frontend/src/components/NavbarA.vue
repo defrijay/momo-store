@@ -96,7 +96,7 @@ export default {
               </li>
     
               <li>
-                <router-link to="/detail-article" class="transition text-white hover:text-white/75"> Artikel </router-link>
+                <router-link to="/list-article" class="transition text-white hover:text-white/75"> Artikel </router-link>
               </li>
     
               <li>
