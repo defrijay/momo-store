@@ -5,7 +5,10 @@ export default {
   methods: {
   formatRupiah(number) {
     return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(number).replace("IDR", "").trim();
-  }
+  },
+  generateRandomRating() {
+    return (Math.random() * (5 - 4) + 4).toFixed(1);
+  },
 },
   data() {
     return {
@@ -16,6 +19,12 @@ export default {
     try {
       const response = await axios.get("http://localhost:5000/api/products/all-products");
       this.products = response.data.slice(0, 12);
+
+      this.products.forEach(product => {
+        if (product.rating === 0) {
+          product.rating = this.generateRandomRating(); // Mengganti rating dengan angka acak
+        }
+      });
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -101,14 +110,21 @@ export default {
             <div class="mt-2 flex items-center gap-2">
               <!-- Rating Stars -->
               <div class="flex items-center">
-                <svg v-for="n in product.rating" :key="n" class="h-3 w-3 text-yellow-400" aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
+                <svg 
+                  v-for="n in Math.floor(product.rating === 0 ? generateRandomRating() : product.rating)" 
+                  :key="n" 
+                  class="h-3 w-3 text-yellow-400" 
+                  aria-hidden="true" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24">
+                  <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                 </svg>
               </div>
 
-              <p class="text-sm font-medium text-gray-900 dark:text-white">{{ product.rating }}.0</p>
+              <p class="text-sm font-medium text-gray-900 dark:text-white">
+                {{ product.rating === 0 ? generateRandomRating() : product.rating }}
+              </p>
               <p class="text-sm font-medium text-gray-500 dark:text-gray-400">(1,233)</p>
             </div>
 
