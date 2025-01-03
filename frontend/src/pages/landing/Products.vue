@@ -45,7 +45,7 @@ export default {
           class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <div class="h-56 w-full">
             <router-link :to="`/detail-product/${product._id}`">
-              <img :src="product.image" :alt="product.name" class="mx-auto h-full" />
+              <img :src="`/Images/${product.category.name}/${product.image}`" :alt="product.name" class="mx-auto h-full" />
             </router-link>
           </div>
 
